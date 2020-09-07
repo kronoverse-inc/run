@@ -32,6 +32,7 @@ Status
 - API stable
 - Testing: 70%                         (Protocol: 95%, Run: 70%, Modules: 30%, Extras: 50%)
 - Berries and Locks not working
+- Inventory deprecated
 - Safari broken
 - Bad import performance
 - No docs, examples, deploy tool, or explorer
@@ -151,7 +152,7 @@ They are stored in the "exec" part of the OP_RETURN payload:
 
 The other parts of this OP_RETURN are:
 
-   in - Number of jig inputs
+   in  - Number of jig inputs
    ref - Array of references to jigs used but not spent
    out - State hashes of jigs in transaction outputs
    del - State hashes of jigs deleted
@@ -164,9 +165,7 @@ This JSON payload is stored in the first output. The OP_RETURN format is:
 It can be accessed via the payload function available on Run:
 
    const tx = await run.blockchain.fetch(txid)
-
    const payload = run.payload(tx)
-
    console.log(payload)
 
 The rest of the protocol will be documented in a coming spec. Reach out for questions!
