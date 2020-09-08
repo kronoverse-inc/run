@@ -1,10 +1,9 @@
 {
-    "name": "@kronoverse/run",
-    "version": "0.6.0",
-    "main": "dist/run.node.min.js",
-    "browser": "dist/run.browser.min.js",
-    "dependencies": {
-      "bsv": "^1.5.2"
-    }
+  "name": "@kronoverse/run",
+  "version": "0.6.0-0",
+  "main": "dist/run.node.min.js",
+  "browser": "dist/run.browser.min.js",
+  "dependencies": {
+    "bsv": "^1.5.2"
   }
-  
+}
