@@ -20,9 +20,10 @@ New Features
 - Destroy jigs                        (And still load and reference them)
 - Auth jigs                           (Spends them)
 - Sealed code                         (Control who can extend from your class)
-- Code whitelist
+- Trusted code
 - Parallel loads and broadcasts
 - Security fixes
+- New presets format
 
 -------------------------------------------------------------------------------
 Status
@@ -30,11 +31,10 @@ Status
 
 - Protocol stable
 - API stable
-- Testing: 70%                         (Protocol: 95%, Run: 70%, Modules: 30%, Extras: 50%)
+- Testing: 70%                         (Protocol: 95%, Run: 80%, Modules: 40%, Extras: 50%)
 - Berries and Locks not working
 - Inventory deprecated
 - Safari broken
-- Bad import performance
 - No docs, examples, deploy tool, or explorer
 - Uses old bsv 1.x library 
 
@@ -45,11 +45,12 @@ API Changes
 class Run {
    deploy(T): Code                     // not async anymore. call sync if needed
    install(T): Code                    // gets you a code jig but doesn't deploy it
+   trust(txid)                         // txid or '*' for all
    async import(rawtx): Transaction    // shorthand for Run.Transaction.import
-   async transaction(callback): any    // shorthand for new Transaction(callback).publish()
+   transaction(callback): any          // shorthand for new Transaction(callback).publish()
    static Transaction                  // access Transaction class. may have multiple now.
-   codeWhitelist: []                   // list of transaction IDs
    payload(rawtx): object              // extract run payload from tx
+   timeout                             // global timeout for loads, publish, sync, etc.
 }
 
 class Transaction {
@@ -98,6 +99,7 @@ Breaking changes
 - Token class
 - Transaction API
 - Static methods on jig classes are recorded
+- New presets format
 - Owner property may not always be accessible now, esp in constructor. It is secure.
 - Getters and setters no longer supported on classes (security hole)
 - Anonymous functions no longer supported as args
