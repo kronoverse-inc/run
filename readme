@@ -24,6 +24,7 @@ New Features
 - Parallel loads and broadcasts
 - Security fixes
 - New presets format
+- Global timeout
 
 -------------------------------------------------------------------------------
 Status
@@ -31,7 +32,7 @@ Status
 
 - Protocol stable
 - API stable
-- Testing: 70%                         (Protocol: 95%, Run: 80%, Modules: 40%, Extras: 50%)
+- Testing: 70%                         (Protocol: 95%, Run: 80%, Modules: 50%, Extras: 50%)
 - Berries and Locks not working
 - Inventory deprecated
 - Safari broken
