@@ -32,9 +32,8 @@ Status
 
 - Protocol stable
 - API stable
-- Testing: 70%                         (Protocol: 95%, Run: 80%, Modules: 50%, Extras: 50%)
+- Testing: 70%                         (Protocol: 95%, Run: 80%, Modules: 60%, Extras: 50%)
 - Berries and Locks not working
-- Inventory deprecated
 - Safari broken
 - No docs, examples, deploy tool, or explorer
 - Uses old bsv 1.x library 
