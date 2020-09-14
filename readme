@@ -34,7 +34,6 @@ Status
 - API stable
 - Testing: 70%                         (Protocol: 95%, Run: 80%, Modules: 60%, Extras: 50%)
 - Berries and Locks not working
-- Safari broken
 - No docs, examples, deploy tool, or explorer
 - Uses old bsv 1.x library 
 
@@ -104,6 +103,7 @@ Breaking changes
 - Getters and setters no longer supported on classes (security hole)
 - Anonymous functions no longer supported as args
 - Move to raw hex transactions and raw hex scripts wherever used
+- Code must be trusted to load. During development, use new Run({ trust: '*' })
 
 -------------------------------------------------------------------------------
 Protocol
