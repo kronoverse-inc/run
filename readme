@@ -32,8 +32,9 @@ Status
 
 - Protocol stable
 - API stable
-- Testing: 70%                         (Protocol: 95%, Run: 80%, Modules: 60%, Extras: 50%)
-- Berries and Locks not working
+- Testing: 85%                         (Protocol: 95%, Run: 80%, Modules: 75%, Extras: 95%)
+- Berries not working
+- Bug: High memory usage when loading uncached jigs
 - No docs, examples, deploy tool, or explorer
 - Uses old bsv 1.x library 
 
