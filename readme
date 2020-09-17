@@ -32,7 +32,7 @@ Status
 
 - Protocol stable
 - API stable
-- Testing: 85%                         (Protocol: 95%, Run: 80%, Modules: 75%, Extras: 95%)
+- Testing: 85%                         (Protocol: 95%, Run: 85%, Modules: 80%, Extras: 95%)
 - Berries not working
 - Bug: High memory usage when loading uncached jigs
 - No docs, examples, deploy tool, or explorer
