@@ -32,7 +32,7 @@ Status
 
 - Protocol stable
 - API stable
-- Testing: 85%                         (Protocol: 95%, Run: 85%, Modules: 80%, Extras: 95%)
+- Testing: 85%                         (Protocol: 95%, Run: 90%, Modules: 85%, Extras: 95%)
 - Berries not working
 - Bug: High memory usage when loading uncached jigs
 - No docs, examples, deploy tool, or explorer
@@ -50,16 +50,18 @@ class Run {
    transaction(callback): any          // shorthand for new Transaction(callback).publish()
    static Transaction                  // access Transaction class. may have multiple now.
    payload(rawtx): object              // extract run payload from tx
-   timeout                             // global timeout for loads, publish, sync, etc.
+   unify(...jigs)                      // Ensures jigs will work together in a transaction
+   timeout: number                     // global timeout for loads, publish, sync, etc.
 }
 
 class Transaction {
    constructor(callback: ?function)    // creates a new batch            
    update(callback: function)          // updates the batch with new actions
-   async publish()                     // publishes
+   async publish(options)              // publishes
    async export(options)               // exports the tx. options: pay and sign booleans
    rollback()                          // undo the transaction's changes. recommended after export.
-   static async import(rawtx): Transaction
+   outputs: [Jig|Code]
+   deletes: [Jig|Code]
 }
 
 class Jig {
@@ -81,7 +83,7 @@ class Token {
 }
 
 class Blockchain {
-  async broadcast (rawtx: string)     // accepts raw hex
+  async broadcast (rawtx: string)     // accepts raw hex, returns txid
   async fetch (txid): rawtx           // returns raw hex
   async utxos (script): []            // utxo.script is hex string now
   async time (txid): number           // ms since unix epoch
