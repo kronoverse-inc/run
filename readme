@@ -99,6 +99,7 @@ Breaking changes
 -------------------------------------------------------------------------------
 
 - Token class
+- run.sync() does not sync the inventory anymore. Call run.inventory.sync()
 - Transaction API
 - Static methods on jig classes are recorded
 - New presets format
