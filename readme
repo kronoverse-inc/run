@@ -34,7 +34,6 @@ Status
 - API stable
 - Testing: 85%                         (Protocol: 95%, Run: 90%, Modules: 85%, Extras: 95%)
 - Berries not working
-- Bug: High memory usage when loading uncached jigs
 - No docs, examples, deploy tool, or explorer
 - Uses old bsv 1.x library 
 
