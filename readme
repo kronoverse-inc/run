@@ -32,8 +32,7 @@ Status
 
 - Protocol stable
 - API stable
-- Testing: 85%                         (Protocol: 95%, Run: 90%, Modules: 85%, Extras: 95%)
-- Berries not working
+- Testing: 90%                         (Protocol: 95%, Run: 90%, Modules: 90%, Extras: 95%)
 - No docs, examples, deploy tool, or explorer
 - Uses old bsv 1.x library 
 
