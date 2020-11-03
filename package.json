@@ -1,6 +1,6 @@
 {
   "name": "@kronoverse/run",
-  "version": "0.6.21",
+  "version": "0.6.22",
   "main": "dist/run.node.min.js",
   "browser": "dist/run.browser.min.js",
   "dependencies": {
