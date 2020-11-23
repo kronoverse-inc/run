@@ -25,6 +25,7 @@ New Features
 - Security fixes
 - New presets format
 - Global timeout
+- Browser cache
 
 -------------------------------------------------------------------------------
 Status
@@ -42,7 +43,7 @@ API Changes
 
 class Run {
    deploy(T): Code                     // not async anymore. call sync if needed
-   install(T): Code                    // gets you a code jig but doesn't deploy it
+   static install(T): Code             // gets you a code jig but doesn't deploy it
 
    trust(txid)                         // txid or '*' for all
 
@@ -57,6 +58,8 @@ class Run {
    networkTimeout: number              // timeout specifically for network calls. default 10000
    networkRetries: number              // number of times to retry network calls. default: 2
    client: boolean                     // client mode. requires loads to come from cache. default: false
+
+   static Code                         // to check instanceof Code for code jigs
 }
 
 class Transaction {
@@ -100,7 +103,7 @@ class Blockchain {
 }
 
 class Owner {
-   async owner()                       // async now
+   async nextOwner()                  // async now, renamed from owner()
 }
 
 -------------------------------------------------------------------------------
